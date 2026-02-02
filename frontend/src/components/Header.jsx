@@ -83,8 +83,9 @@ const Header = () => {
                 className="h-16 w-auto"
               />
               <div>
-                <h1 className="text-lg font-bold text-gray-900 leading-tight">Little Flower Group</h1>
-                <p className="text-xs text-gray-600">of Institutions</p>
+                <h1 className="text-xl font-bold text-[#2d3589] leading-tight">
+                  Little Flower Group of Institutions
+                </h1>
               </div>
             </div>
 
