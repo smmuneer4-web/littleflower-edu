@@ -122,6 +122,26 @@ class AdmissionApplicationCreate(BaseModel):
 async def root():
     return {"message": "Hello World"}
 
+# Health check endpoint for Kubernetes (at root level, not under /api)
+@app.get("/health")
+async def health_check():
+    """Health check endpoint for Kubernetes probes"""
+    try:
+        # Check database connection
+        await db.command("ping")
+        return {
+            "status": "healthy",
+            "database": "connected",
+            "service": "little-flower-admissions"
+        }
+    except Exception as e:
+        logger.error(f"Health check failed: {str(e)}")
+        return {
+            "status": "unhealthy",
+            "database": "disconnected",
+            "error": str(e)
+        }
+
 @api_router.post("/status", response_model=StatusCheck)
 async def create_status_check(input: StatusCheckCreate):
     status_dict = input.model_dump()
@@ -434,6 +454,12 @@ async def download_admission_application(application_id: str):
 # Include the router in the main app
 app.include_router(api_router)
 
+# Add a redirect from /api to /api/ to handle trailing slash
+@app.get("/api")
+async def api_redirect():
+    """Redirect /api to /api/ to show available endpoints"""
+    return {"message": "API is running", "docs": "/docs", "health": "/health"}
+
 app.add_middleware(
     CORSMiddleware,
     allow_credentials=True,
@@ -449,6 +475,14 @@ logging.basicConfig(
 )
 logger = logging.getLogger(__name__)
 
+@app.on_event("startup")
+async def startup_event():
+    """Log startup information"""
+    logger.info("Little Flower Admissions API starting up...")
+    logger.info(f"MongoDB URL: {mongo_url[:20]}..." if mongo_url else "No MongoDB URL")
+    logger.info(f"Database: {os.environ.get('DB_NAME', 'Not set')}")
+
 @app.on_event("shutdown")
 async def shutdown_db_client():
+    logger.info("Shutting down Little Flower Admissions API...")
     client.close()
