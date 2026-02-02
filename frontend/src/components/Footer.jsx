@@ -25,9 +25,11 @@ const Footer = () => {
           {/* About */}
           <div>
             <div className="flex items-center gap-3 mb-6">
-              <div className="w-12 h-12 bg-gradient-to-br from-emerald-500 to-teal-600 rounded-full flex items-center justify-center text-white font-bold text-xl">
-                LF
-              </div>
+              <img 
+                src="https://littleflowerinstitutions.com/wp-content/uploads/2024/01/main_logo-1.webp" 
+                alt="Little Flower Group Logo" 
+                className="h-16 w-auto"
+              />
               <div>
                 <h3 className="text-white font-bold text-lg leading-tight">Little Flower Group</h3>
                 <p className="text-xs text-gray-400">of Institutions</p>
@@ -64,9 +66,9 @@ const Footer = () => {
                 </button>
               </li>
               <li>
-                <button onClick={() => scrollToSection('stories')} className="hover:text-emerald-400 transition-colors">
+                <a href="#" className="hover:text-emerald-400 transition-colors">
                   Life @ Little Flower
-                </button>
+                </a>
               </li>
               <li>
                 <button onClick={() => scrollToSection('testimonials')} className="hover:text-emerald-400 transition-colors">

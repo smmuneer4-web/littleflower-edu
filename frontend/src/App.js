@@ -5,9 +5,7 @@ import HeroSection from './components/HeroSection';
 import AboutSection from './components/AboutSection';
 import AdvantagesSection from './components/AdvantagesSection';
 import WhyChooseSection from './components/WhyChooseSection';
-import StoriesSection from './components/StoriesSection';
 import TestimonialsSection from './components/TestimonialsSection';
-import VideoTestimonialsSection from './components/VideoTestimonialsSection';
 import Footer from './components/Footer';
 import AdmissionFormModal from './components/AdmissionFormModal';
 import { Toaster } from './components/ui/sonner';
@@ -35,9 +33,7 @@ function App() {
         <AboutSection />
         <AdvantagesSection />
         <WhyChooseSection />
-        <StoriesSection />
         <TestimonialsSection />
-        <VideoTestimonialsSection />
       </main>
       <Footer />
       <AdmissionFormModal 

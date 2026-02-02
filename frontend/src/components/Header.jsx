@@ -34,7 +34,6 @@ const Header = () => {
     { label: 'About', id: 'about' },
     { label: 'Courses', id: 'courses' },
     { label: 'Advantages', id: 'advantages' },
-    { label: 'Stories', id: 'stories' },
     { label: 'Testimonials', id: 'testimonials' },
     { label: 'Contact', id: 'contact' }
   ];
@@ -73,9 +72,11 @@ const Header = () => {
               className="flex items-center gap-3 cursor-pointer"
               onClick={() => scrollToSection('hero')}
             >
-              <div className="w-12 h-12 bg-gradient-to-br from-emerald-500 to-teal-600 rounded-full flex items-center justify-center text-white font-bold text-xl">
-                LF
-              </div>
+              <img 
+                src="https://littleflowerinstitutions.com/wp-content/uploads/2024/01/main_logo-1.webp" 
+                alt="Little Flower Group Logo" 
+                className="h-16 w-auto"
+              />
               <div>
                 <h1 className="text-lg font-bold text-gray-900 leading-tight">Little Flower Group</h1>
                 <p className="text-xs text-gray-600">of Institutions</p>
