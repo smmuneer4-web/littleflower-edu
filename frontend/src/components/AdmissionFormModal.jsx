@@ -106,47 +106,78 @@ const AdmissionFormModal = ({ open, onOpenChange }) => {
 
     setIsSubmitting(true);
 
-    // Simulate API call
-    setTimeout(() => {
-      console.log('Form submitted:', formData);
+    try {
+      // Submit to backend API
+      const response = await axios.post(`${API}/admissions`, formData);
       
-      toast({
-        title: "Application Submitted Successfully!",
-        description: "We'll contact you shortly with further details.",
-      });
+      if (response.data && response.data.id) {
+        const applicationId = response.data.id;
+        
+        toast({
+          title: "Application Submitted Successfully!",
+          description: (
+            <div className="space-y-2">
+              <p>Your application has been received. Application ID: {applicationId}</p>
+              <Button
+                size="sm"
+                variant="outline"
+                onClick={() => window.open(`${API}/admissions/${applicationId}/download`, '_blank')}
+                className="mt-2"
+              >
+                <Download size={16} className="mr-2" />
+                Download Application PDF
+              </Button>
+            </div>
+          ),
+          duration: 10000,
+        });
 
-      // Reset form
-      setFormData({
-        fullName: '',
-        mobileNumber: '',
-        email: '',
-        college: '',
-        course: '',
-        whatsappNumber: '',
-        dateOfBirth: '',
-        gender: '',
-        aadhaarNumber: '',
-        religion: '',
-        fatherName: '',
-        parentNumber: '',
-        motherName: '',
-        motherNumber: '',
-        state: '',
-        district: '',
-        pincode: '',
-        address: '',
-        registerNumber: '',
-        stream: '',
-        schoolName: '',
-        schoolPlace: '',
-        lastQualification: '',
-        markPercentage: '',
-        referenceConsultancyName: ''
+        // Reset form
+        setFormData({
+          fullName: '',
+          mobileNumber: '',
+          email: '',
+          college: '',
+          course: '',
+          whatsappNumber: '',
+          dateOfBirth: '',
+          gender: '',
+          aadhaarNumber: '',
+          religion: '',
+          fatherName: '',
+          parentNumber: '',
+          motherName: '',
+          motherNumber: '',
+          state: '',
+          district: '',
+          pincode: '',
+          address: '',
+          registerNumber: '',
+          stream: '',
+          schoolName: '',
+          schoolPlace: '',
+          lastQualification: '',
+          markPercentage: '',
+          referenceConsultancyName: ''
+        });
+        
+        onOpenChange(false);
+        
+        // Open PDF in new tab after a short delay
+        setTimeout(() => {
+          window.open(`${API}/admissions/${applicationId}/download`, '_blank');
+        }, 1000);
+      }
+    } catch (error) {
+      console.error('Error submitting application:', error);
+      toast({
+        title: "Submission Failed",
+        description: error.response?.data?.detail || "Failed to submit application. Please try again.",
+        variant: "destructive"
       });
-      
+    } finally {
       setIsSubmitting(false);
-      onOpenChange(false);
-    }, 1500);
+    }
   };
 
   return (
