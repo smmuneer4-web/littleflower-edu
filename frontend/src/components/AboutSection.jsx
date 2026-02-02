@@ -8,6 +8,32 @@ const AboutSection = () => {
   return (
     <section id="about" className="py-20 bg-white">
       <div className="max-w-7xl mx-auto px-4">
+        {/* WHO WE ARE Section */}
+        <div className="mb-20">
+          <div className="text-center mb-12">
+            <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
+              WHO WE ARE
+            </h2>
+          </div>
+          
+          <div className="max-w-4xl mx-auto">
+            <div className="prose prose-lg max-w-none text-gray-700 leading-relaxed space-y-4">
+              <p>
+                The Little Flower Group, managed by the <strong>SANDESH EDUCATIONAL CULTURAL AND CHARITABLE TRUST/SOCIETY®</strong>, has been dedicated to the pursuit of pure and scientific knowledge since 2002. In response to the growing demand for quality education in nursing, we have established various institutions to meet the needs of the global nursing industry.
+              </p>
+              
+              <p>
+                Our group's mission is to provide high-quality education and training to our aspiring nurses, ensuring that they are equipped with the latest knowledge and practical skills. We believe that this training translates into an effective clinical support system in both the Indian and global healthcare sectors.
+              </p>
+              
+              <p>
+                At Little Flower Group, we strive to set the highest standards in producing excellent nurses who can meet the challenges of the evolving healthcare system. We firmly believe in the power of knowledge to empower and uphold the truth.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        {/* COURSES WE OFFERED Section */}
         <div className="text-center max-w-3xl mx-auto mb-16">
           <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
             {specializationsData.title}

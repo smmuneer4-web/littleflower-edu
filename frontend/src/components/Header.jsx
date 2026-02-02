@@ -1,6 +1,14 @@
 import React, { useState, useEffect } from 'react';
-import { Menu, X, Phone, Mail } from 'lucide-react';
+import { Menu, X, Phone, Mail, ChevronDown } from 'lucide-react';
 import { Button } from './ui/button';
+import {
+  DropdownMenu,
+  DropdownMenuContent,
+  DropdownMenuItem,
+  DropdownMenuLabel,
+  DropdownMenuSeparator,
+  DropdownMenuTrigger,
+} from './ui/dropdown-menu';
 
 const Header = () => {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -33,8 +41,6 @@ const Header = () => {
     { label: 'Home', id: 'hero' },
     { label: 'About', id: 'about' },
     { label: 'Courses', id: 'courses' },
-    { label: 'Advantages', id: 'advantages' },
-    { label: 'Testimonials', id: 'testimonials' },
     { label: 'Contact', id: 'contact' }
   ];
 
@@ -94,6 +100,27 @@ const Header = () => {
                   {item.label}
                 </button>
               ))}
+              
+              {/* Our Institutions Dropdown */}
+              <DropdownMenu>
+                <DropdownMenuTrigger className="flex items-center gap-1 text-gray-700 hover:text-[#2d3589] font-medium transition-colors text-sm outline-none">
+                  Our Institutions
+                  <ChevronDown size={16} />
+                </DropdownMenuTrigger>
+                <DropdownMenuContent align="end" className="w-80">
+                  <DropdownMenuLabel className="text-[#2d3589] font-bold">Campus 1</DropdownMenuLabel>
+                  <DropdownMenuItem className="cursor-pointer">Little Flower College of Nursing</DropdownMenuItem>
+                  <DropdownMenuItem className="cursor-pointer">Little Flower Institute of Allied Health Sciences</DropdownMenuItem>
+                  <DropdownMenuItem className="cursor-pointer">Little Flower College of Pharmacy</DropdownMenuItem>
+                  <DropdownMenuItem className="cursor-pointer">Little Flower College of Physiotherapy</DropdownMenuItem>
+                  <DropdownMenuItem className="cursor-pointer">Sree Venketeshwara School of Nursing</DropdownMenuItem>
+                  <DropdownMenuSeparator />
+                  <DropdownMenuLabel className="text-[#2d3589] font-bold">Campus 2</DropdownMenuLabel>
+                  <DropdownMenuItem className="cursor-pointer">D.R Vijayakumari School of Nursing</DropdownMenuItem>
+                  <DropdownMenuItem className="cursor-pointer">S V College of Nursing</DropdownMenuItem>
+                </DropdownMenuContent>
+              </DropdownMenu>
+
               <Button 
                 onClick={() => {
                   const event = new CustomEvent('openAdmissionForm');
@@ -127,6 +154,27 @@ const Header = () => {
                     {item.label}
                   </button>
                 ))}
+                
+                {/* Mobile Institutions Dropdown */}
+                <div className="py-2">
+                  <div className="font-bold text-gray-900 mb-2">Our Institutions</div>
+                  <div className="ml-4 space-y-2">
+                    <div className="text-[#2d3589] font-semibold text-sm">Campus 1</div>
+                    <div className="ml-2 text-sm text-gray-700 space-y-1">
+                      <div>Little Flower College of Nursing</div>
+                      <div>Little Flower Institute of Allied Health Sciences</div>
+                      <div>Little Flower College of Pharmacy</div>
+                      <div>Little Flower College of Physiotherapy</div>
+                      <div>Sree Venketeshwara School of Nursing</div>
+                    </div>
+                    <div className="text-[#2d3589] font-semibold text-sm mt-2">Campus 2</div>
+                    <div className="ml-2 text-sm text-gray-700 space-y-1">
+                      <div>D.R Vijayakumari School of Nursing</div>
+                      <div>S V College of Nursing</div>
+                    </div>
+                  </div>
+                </div>
+
                 <Button 
                   onClick={() => {
                     setIsMobileMenuOpen(false);
