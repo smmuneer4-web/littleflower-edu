@@ -121,17 +121,17 @@ const Header = () => {
               </DropdownMenu>
 
               <button
-                onClick={() => scrollToSection('contact')}
-                className="text-gray-700 hover:text-[#2d3589] font-medium transition-colors text-sm"
-              >
-                Contact Us
-              </button>
-
-              <button
                 onClick={() => scrollToSection('affiliations')}
                 className="text-gray-700 hover:text-[#2d3589] font-medium transition-colors text-sm"
               >
                 Affiliations
+              </button>
+
+              <button
+                onClick={() => scrollToSection('contact')}
+                className="text-gray-700 hover:text-[#2d3589] font-medium transition-colors text-sm"
+              >
+                Contact Us
               </button>
 
               <Button 
@@ -189,17 +189,17 @@ const Header = () => {
                 </div>
 
                 <button
-                  onClick={() => scrollToSection('contact')}
-                  className="text-left text-gray-700 hover:text-[#2d3589] font-medium transition-colors py-2"
-                >
-                  Contact Us
-                </button>
-
-                <button
                   onClick={() => scrollToSection('affiliations')}
                   className="text-left text-gray-700 hover:text-[#2d3589] font-medium transition-colors py-2"
                 >
                   Affiliations
+                </button>
+
+                <button
+                  onClick={() => scrollToSection('contact')}
+                  className="text-left text-gray-700 hover:text-[#2d3589] font-medium transition-colors py-2"
+                >
+                  Contact Us
                 </button>
 
                 <Button 

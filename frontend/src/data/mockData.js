@@ -218,20 +218,20 @@ export const videoTestimonialsData = {
 
 export const institutions = [
   {
-    campus: "Campus - 1",
+    campus: "Campus 1",
     colleges: [
       { name: "Little Flower College of Nursing", link: "#" },
-      { name: "Little Flower Institute Of Allied Health Sciences", link: "#" },
-      { name: "Little Flower College Of Pharmacy", link: "#" },
-      { name: "Little Flower College Of Physiotherapy", link: "#" },
-      { name: "Sree Venkateshwara School Of Nursing", link: "#" }
+      { name: "Little Flower Institute of Allied Health Sciences", link: "#" },
+      { name: "Little Flower College of Pharmacy", link: "#" },
+      { name: "Little Flower College of Physiotherapy", link: "#" },
+      { name: "Sree Venketeshwara School of Nursing", link: "#" }
     ]
   },
   {
-    campus: "Campus - 2",
+    campus: "Campus 2",
     colleges: [
-      { name: "SV College of Nursing", link: "#" },
-      { name: "D.R Vijayakumari School Of Nursing", link: "#" }
+      { name: "D.R Vijayakumari School of Nursing", link: "#" },
+      { name: "S V College of Nursing", link: "#" }
     ]
   }
 ];

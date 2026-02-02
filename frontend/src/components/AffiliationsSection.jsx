@@ -56,7 +56,7 @@ const AffiliationsSection = () => {
   ];
 
   return (
-    <section id="affiliations" className="py-20 bg-gradient-to-br from-blue-50 via-white to-indigo-50">
+    <section id="affiliations" className="py-20 bg-white">
       <div className="max-w-7xl mx-auto px-4">
         <div className="text-center mb-16">
           <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
@@ -67,27 +67,27 @@ const AffiliationsSection = () => {
           </p>
         </div>
 
-        <div className="space-y-8">
+        <div className="grid md:grid-cols-2 gap-8">
           {affiliations.map((affiliation) => (
             <Card 
               key={affiliation.id}
-              className="hover:shadow-xl transition-all duration-300 border"
+              className="hover:shadow-xl transition-all duration-300 border hover:border-blue-200"
             >
-              <CardContent className="p-8">
-                <h3 className="text-2xl font-bold text-gray-900 mb-3">
+              <CardContent className="p-6">
+                <h3 className="text-xl font-bold text-gray-900 mb-3">
                   {affiliation.title}
                 </h3>
-                <p className="text-gray-600 mb-6 leading-relaxed">
+                <p className="text-gray-600 mb-6 leading-relaxed text-sm">
                   {affiliation.description}
                 </p>
                 
-                <div className="flex flex-wrap gap-6 items-center">
+                <div className="flex flex-wrap gap-4 items-center justify-center">
                   {affiliation.logos.map((logo, index) => (
-                    <div key={index} className="bg-white p-4 rounded-lg border hover:shadow-md transition-shadow">
+                    <div key={index} className="bg-gray-50 p-3 rounded-lg border hover:shadow-md transition-shadow">
                       <img
                         src={logo}
                         alt={`Affiliation logo ${index + 1}`}
-                        className="h-16 w-auto object-contain"
+                        className="h-12 w-auto object-contain"
                       />
                     </div>
                   ))}
