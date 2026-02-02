@@ -237,17 +237,18 @@ export const institutions = [
 ];
 
 export const courseOptions = [
-  "B.Sc Nursing",
   "GNM (General Nursing and Midwifery)",
-  "Post Basic B.Sc Nursing",
-  "M.Sc Nursing",
+  "P.B.B.Sc Nursing",
+  "B.Sc Nursing",
+  "M.Sc Nursing (MSN OBG)",
+  "M.Sc Nursing (PAE PSY.COM)",
   "DMLT (Diploma in Medical Laboratory Technology)",
+  "DMIT (Diploma in Medical Imaging Technology)",
+  "DOT (Diploma in Operation Theatre Technology)",
   "B.Sc Medical Laboratory Technology",
-  "B.Sc Radiology and Imaging Technology",
-  "B.Sc Cardiac Care Technology",
-  "D.Pharm (Diploma in Pharmacy)",
+  "B.Sc Medical Imaging Technology",
+  "B.Sc Anaesthesia Technology and Operation Theatre Technology",
   "B.Pharm (Bachelor of Pharmacy)",
-  "M.Pharm (Master of Pharmacy)",
-  "BPT (Bachelor of Physiotherapy)",
-  "MPT (Master of Physiotherapy)"
+  "D.Pharm (Diploma in Pharmacy)",
+  "BPT (Bachelor of Physiotherapy)"
 ];
