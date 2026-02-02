@@ -72,11 +72,11 @@ const AdmissionFormModal = ({ open, onOpenChange }) => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     
-    // Basic validation
-    if (!formData.fullName || !formData.email || !formData.mobileNumber || !formData.college || !formData.course) {
+    // Basic validation - only check required fields
+    if (!formData.fullName?.trim() || !formData.email?.trim() || !formData.mobileNumber?.trim() || !formData.college || !formData.course) {
       toast({
         title: "Required Fields Missing",
-        description: "Please fill in all required fields in Candidate Information section.",
+        description: "Please fill in all required fields: Full Name, Mobile Number, Email, College, and Course.",
         variant: "destructive"
       });
       return;
@@ -84,7 +84,7 @@ const AdmissionFormModal = ({ open, onOpenChange }) => {
 
     // Email validation
     const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-    if (!emailRegex.test(formData.email)) {
+    if (!emailRegex.test(formData.email.trim())) {
       toast({
         title: "Invalid Email",
         description: "Please enter a valid email address.",
@@ -95,7 +95,7 @@ const AdmissionFormModal = ({ open, onOpenChange }) => {
 
     // Phone validation
     const phoneRegex = /^[0-9]{10}$/;
-    if (!phoneRegex.test(formData.mobileNumber)) {
+    if (!phoneRegex.test(formData.mobileNumber.trim())) {
       toast({
         title: "Invalid Mobile Number",
         description: "Please enter a valid 10-digit mobile number.",
@@ -113,23 +113,10 @@ const AdmissionFormModal = ({ open, onOpenChange }) => {
       if (response.data && response.data.id) {
         const applicationId = response.data.id;
         
+        // Show success toast
         toast({
           title: "Application Submitted Successfully!",
-          description: (
-            <div className="space-y-2">
-              <p>Your application has been received. Application ID: {applicationId}</p>
-              <Button
-                size="sm"
-                variant="outline"
-                onClick={() => window.open(`${API}/admissions/${applicationId}/download`, '_blank')}
-                className="mt-2"
-              >
-                <Download size={16} className="mr-2" />
-                Download Application PDF
-              </Button>
-            </div>
-          ),
-          duration: 10000,
+          description: `Your application has been received. Application ID: ${applicationId}. The PDF will download automatically.`,
         });
 
         // Reset form
@@ -166,7 +153,7 @@ const AdmissionFormModal = ({ open, onOpenChange }) => {
         // Open PDF in new tab after a short delay
         setTimeout(() => {
           window.open(`${API}/admissions/${applicationId}/download`, '_blank');
-        }, 1000);
+        }, 500);
       }
     } catch (error) {
       console.error('Error submitting application:', error);
