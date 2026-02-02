@@ -40,8 +40,7 @@ const Header = () => {
   const navItems = [
     { label: 'Home', id: 'hero' },
     { label: 'About', id: 'about' },
-    { label: 'Courses', id: 'courses' },
-    { label: 'Contact', id: 'contact' }
+    { label: 'Courses', id: 'courses' }
   ];
 
   return (
@@ -121,6 +120,20 @@ const Header = () => {
                 </DropdownMenuContent>
               </DropdownMenu>
 
+              <button
+                onClick={() => scrollToSection('contact')}
+                className="text-gray-700 hover:text-[#2d3589] font-medium transition-colors text-sm"
+              >
+                Contact Us
+              </button>
+
+              <button
+                onClick={() => scrollToSection('affiliations')}
+                className="text-gray-700 hover:text-[#2d3589] font-medium transition-colors text-sm"
+              >
+                Affiliations
+              </button>
+
               <Button 
                 onClick={() => {
                   const event = new CustomEvent('openAdmissionForm');
@@ -174,6 +187,20 @@ const Header = () => {
                     </div>
                   </div>
                 </div>
+
+                <button
+                  onClick={() => scrollToSection('contact')}
+                  className="text-left text-gray-700 hover:text-[#2d3589] font-medium transition-colors py-2"
+                >
+                  Contact Us
+                </button>
+
+                <button
+                  onClick={() => scrollToSection('affiliations')}
+                  className="text-left text-gray-700 hover:text-[#2d3589] font-medium transition-colors py-2"
+                >
+                  Affiliations
+                </button>
 
                 <Button 
                   onClick={() => {

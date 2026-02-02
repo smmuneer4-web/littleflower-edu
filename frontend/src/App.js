@@ -6,6 +6,7 @@ import AboutSection from './components/AboutSection';
 import AdvantagesSection from './components/AdvantagesSection';
 import WhyChooseSection from './components/WhyChooseSection';
 import TestimonialsSection from './components/TestimonialsSection';
+import AffiliationsSection from './components/AffiliationsSection';
 import Footer from './components/Footer';
 import AdmissionFormModal from './components/AdmissionFormModal';
 import { Toaster } from './components/ui/sonner';
@@ -34,6 +35,7 @@ function App() {
         <AdvantagesSection />
         <WhyChooseSection />
         <TestimonialsSection />
+        <AffiliationsSection />
       </main>
       <Footer />
       <AdmissionFormModal 
