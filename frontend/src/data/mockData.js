@@ -13,33 +13,33 @@ export const heroData = {
 };
 
 export const specializationsData = {
-  title: "3 Specializations. Thousand Dreams. 1 Little Flower",
+  title: "COURSES WE OFFERED",
   subtitle: "Little Flower Group of Institutions is one of India's leading academic institutions. Pioneering in the world of Nursing, Allied health science, Pharmaceutical studies, and Physiotherapy studies.",
   courses: [
     {
       id: 1,
-      title: "Nursing Courses",
+      title: "NURSING",
       description: "Forge a path of compassion and expertise in healthcare. Our Nursing Courses blend theory with hands-on experience, preparing you for a fulfilling career as a registered nurse or nurse practitioner.",
       image: "https://images.unsplash.com/photo-1589104759909-e355f8999f7e",
       domain: "nursing"
     },
     {
       id: 2,
-      title: "Allied Health Science Courses",
+      title: "ALLIED HEALTH SCIENCE",
       description: "Explore essential roles in modern healthcare. Our Allied Health Sciences courses offer hands-on training and practical knowledge in medical technology, radiography, and related disciplines.",
       image: "https://images.unsplash.com/photo-1614308456595-a59d48697ea8",
       domain: "allied-health-sciences"
     },
     {
       id: 3,
-      title: "Pharmacy Courses",
+      title: "PHARMACY",
       description: "Enter the dynamic world of pharmaceutical sciences. Our Pharmacy Courses equip you with the expertise to excel as a pharmacist, researcher, or regulator, shaping the future of healthcare.",
       image: "https://images.unsplash.com/photo-1766297248027-864589dbd336",
       domain: "pharmacy"
     },
     {
       id: 4,
-      title: "Physiotherapy Courses",
+      title: "PHYSIOTHERAPY",
       description: "Step into physiotherapy. Our courses build practical skills and clinical expertise to restore movement and improve quality of life.",
       image: "https://images.unsplash.com/photo-1581122584612-713f89daa8eb",
       domain: "physiotherapy"
@@ -68,6 +68,12 @@ export const advantagesData = {
       title: "Well-Equipped Laboratories",
       description: "Our state-of-the-art laboratories provide students with the resources they need to excel in their studies. Equipped with modern facilities and technology, our labs offer a dynamic learning environment.",
       icon: "Microscope"
+    },
+    {
+      id: 4,
+      title: "Home Away from Home Campus",
+      description: "Our comfortable and secure hostel facilities provide a nurturing environment where students feel at home. With modern amenities, nutritious meals, and a supportive community, we ensure that students can focus on their studies while enjoying a warm, family-like atmosphere away from home.",
+      icon: "Home"
     }
   ],
   image: "https://images.unsplash.com/photo-1766297248122-5957c51b1f7c"

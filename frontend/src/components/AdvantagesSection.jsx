@@ -1,12 +1,13 @@
 import React from 'react';
 import { advantagesData } from '../data/mockData';
 import { Card, CardContent } from './ui/card';
-import { Building2, Users, Microscope } from 'lucide-react';
+import { Building2, Users, Microscope, Home } from 'lucide-react';
 
 const iconMap = {
   Building2: Building2,
   Users: Users,
-  Microscope: Microscope
+  Microscope: Microscope,
+  Home: Home
 };
 
 const AdvantagesSection = () => {
