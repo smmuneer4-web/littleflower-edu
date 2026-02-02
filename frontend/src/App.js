@@ -1,52 +1,50 @@
-import { useEffect } from "react";
-import "@/App.css";
-import { BrowserRouter, Routes, Route } from "react-router-dom";
-import axios from "axios";
+import React, { useState, useEffect } from 'react';
+import './App.css';
+import Header from './components/Header';
+import HeroSection from './components/HeroSection';
+import AboutSection from './components/AboutSection';
+import AdvantagesSection from './components/AdvantagesSection';
+import WhyChooseSection from './components/WhyChooseSection';
+import StoriesSection from './components/StoriesSection';
+import TestimonialsSection from './components/TestimonialsSection';
+import VideoTestimonialsSection from './components/VideoTestimonialsSection';
+import Footer from './components/Footer';
+import AdmissionFormModal from './components/AdmissionFormModal';
+import { Toaster } from './components/ui/sonner';
 
-const BACKEND_URL = process.env.REACT_APP_BACKEND_URL;
-const API = `${BACKEND_URL}/api`;
-
-const Home = () => {
-  const helloWorldApi = async () => {
-    try {
-      const response = await axios.get(`${API}/`);
-      console.log(response.data.message);
-    } catch (e) {
-      console.error(e, `errored out requesting / api`);
-    }
-  };
+function App() {
+  const [isAdmissionFormOpen, setIsAdmissionFormOpen] = useState(false);
 
   useEffect(() => {
-    helloWorldApi();
+    const handleOpenAdmissionForm = () => {
+      setIsAdmissionFormOpen(true);
+    };
+
+    window.addEventListener('openAdmissionForm', handleOpenAdmissionForm);
+
+    return () => {
+      window.removeEventListener('openAdmissionForm', handleOpenAdmissionForm);
+    };
   }, []);
 
   return (
-    <div>
-      <header className="App-header">
-        <a
-          className="App-link"
-          href="https://emergent.sh"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <img src="https://avatars.githubusercontent.com/in/1201222?s=120&u=2686cf91179bbafbc7a71bfbc43004cf9ae1acea&v=4" />
-        </a>
-        <p className="mt-5">Building something incredible ~!</p>
-      </header>
-    </div>
-  );
-};
-
-function App() {
-  return (
     <div className="App">
-      <BrowserRouter>
-        <Routes>
-          <Route path="/" element={<Home />}>
-            <Route index element={<Home />} />
-          </Route>
-        </Routes>
-      </BrowserRouter>
+      <Header />
+      <main>
+        <HeroSection />
+        <AboutSection />
+        <AdvantagesSection />
+        <WhyChooseSection />
+        <StoriesSection />
+        <TestimonialsSection />
+        <VideoTestimonialsSection />
+      </main>
+      <Footer />
+      <AdmissionFormModal 
+        open={isAdmissionFormOpen} 
+        onOpenChange={setIsAdmissionFormOpen} 
+      />
+      <Toaster />
     </div>
   );
 }
