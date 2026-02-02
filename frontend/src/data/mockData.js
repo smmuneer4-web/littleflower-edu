@@ -6,8 +6,8 @@ export const heroData = {
   ctaText: "Find Your Course",
   ctaLink: "#courses",
   contactInfo: {
-    phone: "+91 90370 41972",
-    email: "littleflowergroupbng@gmail.com",
+    phone: "+91 90378 34632",
+    email: "info@littleflowerinstitutions.in",
     address: "80 Feet Ring Road, Near Bangalore University, Mallathahalli Bus Stop, Bangalore - 560056"
   }
 };

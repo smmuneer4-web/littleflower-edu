@@ -41,16 +41,16 @@ const Header = () => {
   return (
     <>
       {/* Top Bar */}
-      <div className="bg-emerald-700 text-white py-2 px-4">
+      <div className="bg-[#2d3589] text-white py-2 px-4">
         <div className="max-w-7xl mx-auto flex flex-wrap justify-between items-center text-sm gap-2">
           <div className="flex items-center gap-4 flex-wrap">
-            <a href="tel:+919037041972" className="flex items-center gap-2 hover:text-emerald-100 transition-colors">
+            <a href="tel:+919037834632" className="flex items-center gap-2 hover:text-blue-100 transition-colors">
               <Phone size={14} />
-              <span>+91 90370 41972</span>
+              <span>+91 90378 34632</span>
             </a>
-            <a href="mailto:littleflowergroupbng@gmail.com" className="flex items-center gap-2 hover:text-emerald-100 transition-colors">
+            <a href="mailto:info@littleflowerinstitutions.in" className="flex items-center gap-2 hover:text-blue-100 transition-colors">
               <Mail size={14} />
-              <span className="hidden sm:inline">littleflowergroupbng@gmail.com</span>
+              <span className="hidden sm:inline">info@littleflowerinstitutions.in</span>
             </a>
           </div>
           <div className="hidden md:block text-xs">
@@ -89,7 +89,7 @@ const Header = () => {
                 <button
                   key={item.id}
                   onClick={() => scrollToSection(item.id)}
-                  className="text-gray-700 hover:text-emerald-600 font-medium transition-colors text-sm"
+                  className="text-gray-700 hover:text-[#2d3589] font-medium transition-colors text-sm"
                 >
                   {item.label}
                 </button>
@@ -99,7 +99,7 @@ const Header = () => {
                   const event = new CustomEvent('openAdmissionForm');
                   window.dispatchEvent(event);
                 }}
-                className="bg-emerald-600 hover:bg-emerald-700 text-white"
+                className="bg-[#2d3589] hover:bg-[#232a6b] text-white"
               >
                 Apply Now
               </Button>
@@ -108,7 +108,7 @@ const Header = () => {
             {/* Mobile Menu Button */}
             <button
               onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-              className="lg:hidden p-2 text-gray-700 hover:text-emerald-600 transition-colors"
+              className="lg:hidden p-2 text-gray-700 hover:text-[#2d3589] transition-colors"
             >
               {isMobileMenuOpen ? <X size={24} /> : <Menu size={24} />}
             </button>
@@ -122,7 +122,7 @@ const Header = () => {
                   <button
                     key={item.id}
                     onClick={() => scrollToSection(item.id)}
-                    className="text-left text-gray-700 hover:text-emerald-600 font-medium transition-colors py-2"
+                    className="text-left text-gray-700 hover:text-[#2d3589] font-medium transition-colors py-2"
                   >
                     {item.label}
                   </button>
@@ -133,7 +133,7 @@ const Header = () => {
                     const event = new CustomEvent('openAdmissionForm');
                     window.dispatchEvent(event);
                   }}
-                  className="bg-emerald-600 hover:bg-emerald-700 text-white w-full"
+                  className="bg-[#2d3589] hover:bg-[#232a6b] text-white w-full"
                 >
                   Apply Now
                 </Button>
