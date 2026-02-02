@@ -198,7 +198,7 @@ Please log in to review the full application.
         logger.error(f"Failed to send email notification: {str(e)}")
 
 # Admission Application Endpoints
-@api_router.post("/admissions", response_model=AdmissionApplication)
+@api_router.post("/admissions", response_model=AdmissionApplication, status_code=201)
 async def create_admission_application(application: AdmissionApplicationCreate):
     """Submit a new admission application"""
     try:
