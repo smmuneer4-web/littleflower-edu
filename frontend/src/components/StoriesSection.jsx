@@ -6,7 +6,7 @@ import { ArrowRight } from 'lucide-react';
 
 const StoriesSection = () => {
   return (
-    <section id="stories" className="py-20 bg-gradient-to-br from-teal-50 via-white to-emerald-50">
+    <section id="stories" className="py-20 bg-gradient-to-br from-indigo-50 via-white to-blue-50">
       <div className="max-w-7xl mx-auto px-4">
         <div className="text-center max-w-3xl mx-auto mb-16">
           <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
@@ -47,7 +47,7 @@ const StoriesSection = () => {
           <Button 
             size="lg"
             variant="outline"
-            className="border-emerald-600 text-emerald-600 hover:bg-emerald-50 group"
+            className="border-[#2d3589] text-[#2d3589] hover:bg-blue-50 group"
           >
             Find More Stories
             <ArrowRight className="ml-2 group-hover:translate-x-1 transition-transform" size={20} />

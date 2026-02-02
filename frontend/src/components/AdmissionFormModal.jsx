@@ -107,7 +107,7 @@ const AdmissionFormModal = ({ open, onOpenChange }) => {
               placeholder="Enter your full name"
               value={formData.name}
               onChange={(e) => handleInputChange('name', e.target.value)}
-              className="border-gray-300 focus:border-emerald-500 focus:ring-emerald-500"
+              className="border-gray-300 focus:border-[#2d3589] focus:ring-[#2d3589]"
               required
             />
           </div>
@@ -123,7 +123,7 @@ const AdmissionFormModal = ({ open, onOpenChange }) => {
               placeholder="your.email@example.com"
               value={formData.email}
               onChange={(e) => handleInputChange('email', e.target.value)}
-              className="border-gray-300 focus:border-emerald-500 focus:ring-emerald-500"
+              className="border-gray-300 focus:border-[#2d3589] focus:ring-[#2d3589]"
               required
             />
           </div>
@@ -139,7 +139,7 @@ const AdmissionFormModal = ({ open, onOpenChange }) => {
               placeholder="10-digit mobile number"
               value={formData.phone}
               onChange={(e) => handleInputChange('phone', e.target.value)}
-              className="border-gray-300 focus:border-emerald-500 focus:ring-emerald-500"
+              className="border-gray-300 focus:border-[#2d3589] focus:ring-[#2d3589]"
               maxLength={10}
               required
             />
@@ -151,7 +151,7 @@ const AdmissionFormModal = ({ open, onOpenChange }) => {
               Course Interest <span className="text-red-500">*</span>
             </Label>
             <Select value={formData.course} onValueChange={(value) => handleInputChange('course', value)}>
-              <SelectTrigger className="border-gray-300 focus:border-emerald-500 focus:ring-emerald-500">
+              <SelectTrigger className="border-gray-300 focus:border-[#2d3589] focus:ring-[#2d3589]">
                 <SelectValue placeholder="Select a course" />
               </SelectTrigger>
               <SelectContent>
@@ -174,7 +174,7 @@ const AdmissionFormModal = ({ open, onOpenChange }) => {
               placeholder="Tell us about your interests or any questions you have..."
               value={formData.message}
               onChange={(e) => handleInputChange('message', e.target.value)}
-              className="border-gray-300 focus:border-emerald-500 focus:ring-emerald-500 min-h-[100px]"
+              className="border-gray-300 focus:border-[#2d3589] focus:ring-[#2d3589] min-h-[100px]"
               rows={4}
             />
           </div>
@@ -184,7 +184,7 @@ const AdmissionFormModal = ({ open, onOpenChange }) => {
             <Button
               type="submit"
               disabled={isSubmitting}
-              className="flex-1 bg-emerald-600 hover:bg-emerald-700 text-white"
+              className="flex-1 bg-[#2d3589] hover:bg-[#232a6b] text-white"
             >
               {isSubmitting ? (
                 <>

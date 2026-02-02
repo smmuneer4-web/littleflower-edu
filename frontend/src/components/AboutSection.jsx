@@ -40,7 +40,7 @@ const AboutSection = () => {
                 </p>
                 <Button 
                   variant="ghost" 
-                  className="text-emerald-600 hover:text-emerald-700 hover:bg-emerald-50 p-0 h-auto font-semibold group/btn"
+                  className="text-[#2d3589] hover:text-[#232a6b] hover:bg-blue-50 p-0 h-auto font-semibold group/btn"
                 >
                   Learn More
                   <ArrowRight className="ml-2 group-hover/btn:translate-x-1 transition-transform" size={16} />

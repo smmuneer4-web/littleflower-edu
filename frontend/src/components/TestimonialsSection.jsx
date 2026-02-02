@@ -20,22 +20,22 @@ const TestimonialsSection = () => {
           {testimonialsData.testimonials.map((testimonial) => (
             <Card 
               key={testimonial.id}
-              className="hover:shadow-xl transition-all duration-300 border hover:border-emerald-200 relative overflow-hidden"
+              className="hover:shadow-xl transition-all duration-300 border hover:border-blue-200 relative overflow-hidden"
             >
               <CardContent className="p-8">
                 <div className="absolute top-4 right-4 opacity-10">
-                  <Quote size={80} className="text-emerald-600" />
+                  <Quote size={80} className="text-[#2d3589]" />
                 </div>
                 
                 <div className="flex items-center gap-4 mb-6 relative z-10">
                   <img
                     src={testimonial.image}
                     alt={testimonial.name}
-                    className="w-16 h-16 rounded-full object-cover ring-4 ring-emerald-100"
+                    className="w-16 h-16 rounded-full object-cover ring-4 ring-blue-100"
                   />
                   <div>
                     <div className="font-bold text-gray-900 text-lg">{testimonial.name}</div>
-                    <div className="text-sm text-emerald-600">{testimonial.role}</div>
+                    <div className="text-sm text-[#2d3589]">{testimonial.role}</div>
                   </div>
                 </div>
                 

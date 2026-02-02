@@ -11,7 +11,7 @@ const iconMap = {
 
 const AdvantagesSection = () => {
   return (
-    <section id="advantages" className="py-20 bg-gradient-to-br from-emerald-50 via-white to-teal-50">
+    <section id="advantages" className="py-20 bg-gradient-to-br from-blue-50 via-white to-indigo-50">
       <div className="max-w-7xl mx-auto px-4">
         <div className="grid lg:grid-cols-2 gap-12 items-center">
           {/* Left - Image */}
@@ -26,7 +26,7 @@ const AdvantagesSection = () => {
             </div>
             
             {/* Floating Badge */}
-            <div className="absolute -bottom-6 -right-6 bg-emerald-600 text-white p-8 rounded-2xl shadow-xl">
+            <div className="absolute -bottom-6 -right-6 bg-[#2d3589] text-white p-8 rounded-2xl shadow-xl">
               <div className="text-4xl font-bold">20+</div>
               <div className="text-sm font-medium">Years of Excellence</div>
             </div>
@@ -49,12 +49,12 @@ const AdvantagesSection = () => {
                 return (
                   <Card 
                     key={advantage.id}
-                    className="border-l-4 border-l-emerald-600 hover:shadow-lg transition-shadow duration-300"
+                    className="border-l-4 border-l-[#2d3589] hover:shadow-lg transition-shadow duration-300"
                   >
                     <CardContent className="p-6">
                       <div className="flex gap-4">
-                        <div className="w-12 h-12 bg-emerald-100 rounded-lg flex items-center justify-center flex-shrink-0">
-                          <IconComponent className="text-emerald-600" size={24} />
+                        <div className="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center flex-shrink-0">
+                          <IconComponent className="text-[#2d3589]" size={24} />
                         </div>
                         <div>
                           <h3 className="text-xl font-bold text-gray-900 mb-2">

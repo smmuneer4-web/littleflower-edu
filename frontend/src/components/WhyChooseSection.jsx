@@ -32,11 +32,11 @@ const WhyChooseSection = () => {
             return (
               <Card 
                 key={feature.id}
-                className="group hover:shadow-xl transition-all duration-300 border hover:border-emerald-200"
+                className="group hover:shadow-xl transition-all duration-300 border hover:border-blue-200"
               >
                 <CardContent className="p-6">
-                  <div className="w-14 h-14 bg-gradient-to-br from-emerald-100 to-teal-100 rounded-xl flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-300">
-                    <IconComponent className="text-emerald-600" size={28} />
+                  <div className="w-14 h-14 bg-gradient-to-br from-blue-100 to-indigo-100 rounded-xl flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-300">
+                    <IconComponent className="text-[#2d3589]" size={28} />
                   </div>
                   <h3 className="text-xl font-bold text-gray-900 mb-3">
                     {feature.title}

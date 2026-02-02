@@ -19,11 +19,11 @@ const HeroSection = () => {
   };
 
   return (
-    <section id="hero" className="relative min-h-[90vh] flex items-center overflow-hidden bg-gradient-to-br from-emerald-50 via-white to-teal-50">
+    <section id="hero" className="relative min-h-[90vh] flex items-center overflow-hidden bg-gradient-to-br from-blue-50 via-white to-indigo-50">
       {/* Background Pattern */}
       <div className="absolute inset-0 opacity-5">
         <div className="absolute inset-0" style={{
-          backgroundImage: `url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23059669' fill-opacity='1'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E")`,
+          backgroundImage: `url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%232d3589' fill-opacity='1'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E")`,
         }}></div>
       </div>
 
@@ -32,7 +32,7 @@ const HeroSection = () => {
           {/* Left Content */}
           <div className="space-y-8">
             <div className="inline-block">
-              <span className="bg-emerald-100 text-emerald-700 px-4 py-2 rounded-full text-sm font-semibold">
+              <span className="bg-blue-100 text-[#2d3589] px-4 py-2 rounded-full text-sm font-semibold">
                 Achieve Career-Ready Skills at Little Flower
               </span>
             </div>
@@ -49,7 +49,7 @@ const HeroSection = () => {
               <Button 
                 size="lg"
                 onClick={() => scrollToSection('courses')}
-                className="bg-emerald-600 hover:bg-emerald-700 text-white group"
+                className="bg-[#2d3589] hover:bg-[#232a6b] text-white group"
               >
                 {heroData.ctaText}
                 <ArrowRight className="ml-2 group-hover:translate-x-1 transition-transform" size={20} />
@@ -61,7 +61,7 @@ const HeroSection = () => {
                   const event = new CustomEvent('openAdmissionForm');
                   window.dispatchEvent(event);
                 }}
-                className="border-emerald-600 text-emerald-600 hover:bg-emerald-50"
+                className="border-[#2d3589] text-[#2d3589] hover:bg-blue-50"
               >
                 Apply for Admission
               </Button>
@@ -70,15 +70,15 @@ const HeroSection = () => {
             {/* Stats */}
             <div className="grid grid-cols-3 gap-6 pt-8 border-t">
               <div>
-                <div className="text-3xl font-bold text-emerald-600">20+</div>
+                <div className="text-3xl font-bold text-[#2d3589]">20+</div>
                 <div className="text-sm text-gray-600">Years Experience</div>
               </div>
               <div>
-                <div className="text-3xl font-bold text-emerald-600">5000+</div>
+                <div className="text-3xl font-bold text-[#2d3589]">5000+</div>
                 <div className="text-sm text-gray-600">Students</div>
               </div>
               <div>
-                <div className="text-3xl font-bold text-emerald-600">7</div>
+                <div className="text-3xl font-bold text-[#2d3589]">7</div>
                 <div className="text-sm text-gray-600">Institutions</div>
               </div>
             </div>
@@ -98,8 +98,8 @@ const HeroSection = () => {
             {/* Floating Card */}
             <div className="absolute -bottom-6 -left-6 bg-white p-6 rounded-xl shadow-xl max-w-xs">
               <div className="flex items-start gap-4">
-                <div className="w-12 h-12 bg-emerald-100 rounded-full flex items-center justify-center flex-shrink-0">
-                  <svg className="w-6 h-6 text-emerald-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <div className="w-12 h-12 bg-blue-100 rounded-full flex items-center justify-center flex-shrink-0">
+                  <svg className="w-6 h-6 text-[#2d3589]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
                   </svg>
                 </div>
